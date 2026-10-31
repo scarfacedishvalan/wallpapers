@@ -1,0 +1,72 @@
+﻿<Window x:Class="WallpaperUtility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Wallpaper Utility" Height="500" Width="760"
+        MinHeight="480" MinWidth="600" WindowStartupLocation="CenterScreen"
+        Closing="WindowClosing">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="_Image path (JPEG, PNG, or BMP)" Target="{Binding ElementName=ImagePathBox}"
+               Padding="0,0,0,8"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="ImagePathBox" AutomationProperties.AutomationId="ImagePath"
+                     VerticalContentAlignment="Center" Padding="6" TextChanged="ImagePathChanged"/>
+            <Button x:Name="BrowseButton" Grid.Column="1" Content="_Browse..."
+                    Margin="8,0,0,0" Padding="12,6" Click="BrowseClicked"/>
+        </Grid>
+        <Button x:Name="ApplyButton" Grid.Row="2" Content="_Apply wallpaper"
+                AutomationProperties.AutomationId="ApplyWallpaper"
+                HorizontalAlignment="Left" Margin="0,12,0,10" Padding="14,7"
+                IsEnabled="False" IsDefault="True" Click="ApplyClicked"/>
+        <Label Grid.Row="3" Content="_Slideshow folder (30 seconds per image)"
+               Target="{Binding ElementName=FolderPathBox}" Padding="0,10,0,8"/>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="FolderPathBox" AutomationProperties.AutomationId="FolderPath"
+                     VerticalContentAlignment="Center" Padding="6" TextChanged="FolderPathChanged"/>
+            <Button x:Name="FolderBrowseButton" Grid.Column="1" Content="Choose _folder..."
+                    Margin="8,0,0,0" Padding="12,6" Click="FolderBrowseClicked"/>
+        </Grid>
+        <StackPanel Grid.Row="5" Margin="0,12,0,10">
+            <CheckBox x:Name="CollageModeBox" Content="_Compose collages (portrait photos side by side, sized for this monitor)"
+                      AutomationProperties.AutomationId="CollageMode" Margin="0,0,0,6"/>
+            <CheckBox x:Name="StartupBox" Content="Start with _Windows (runs the slideshow in the background, from the tray)"
+                      AutomationProperties.AutomationId="StartWithWindows" Margin="0,0,0,10"
+                      Checked="StartupChanged" Unchecked="StartupChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartButton" Content="_Start slideshow" Padding="14,7"
+                        AutomationProperties.AutomationId="StartSlideshow" Click="StartClicked"/>
+                <Button x:Name="StopButton" Content="S_top" Padding="14,7" Margin="8,0,0,0"
+                        AutomationProperties.AutomationId="StopSlideshow" IsEnabled="False" Click="StopClicked"/>
+                <Button x:Name="PreviewButton" Content="_Preview collages..." Padding="14,7" Margin="24,0,0,0"
+                        AutomationProperties.AutomationId="PreviewCollages" Click="PreviewClicked"/>
+                <Button x:Name="BackgroundButton" Content="_Run in background" Padding="14,7" Margin="8,0,0,0"
+                        AutomationProperties.AutomationId="RunInBackground" Click="BackgroundClicked"
+                        ToolTip="Hide this window. The slideshow keeps running; reopen it from the tray icon."/>
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer Grid.Row="6" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="StatusText" Text="Choose an image or paste its full path."
+                       AutomationProperties.AutomationId="Status"
+                       AutomationProperties.LiveSetting="Polite" TextWrapping="Wrap"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

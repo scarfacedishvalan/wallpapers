@@ -1,0 +1,14 @@
+C:\work\wallpapers\WallpaperUtility.CompositionTests\bin\Release\net10.0-windows\WallpaperUtility.CompositionTests.exe
+C:\work\wallpapers\WallpaperUtility.CompositionTests\bin\Release\net10.0-windows\WallpaperUtility.CompositionTests.deps.json
+C:\work\wallpapers\WallpaperUtility.CompositionTests\bin\Release\net10.0-windows\WallpaperUtility.CompositionTests.runtimeconfig.json
+C:\work\wallpapers\WallpaperUtility.CompositionTests\bin\Release\net10.0-windows\WallpaperUtility.CompositionTests.dll
+C:\work\wallpapers\WallpaperUtility.CompositionTests\bin\Release\net10.0-windows\WallpaperUtility.CompositionTests.pdb
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.AssemblyInfoInputs.cache
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.AssemblyInfo.cs
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.csproj.CoreCompileInputs.cache
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.dll
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\refint\WallpaperUtility.CompositionTests.dll
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.pdb
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\WallpaperUtility.CompositionTests.genruntimeconfig.cache
+C:\work\wallpapers\WallpaperUtility.CompositionTests\obj\Release\net10.0-windows\ref\WallpaperUtility.CompositionTests.dll
